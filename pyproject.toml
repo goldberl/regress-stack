@@ -32,7 +32,7 @@ regress-stack = "regress_stack.__main__:main"
 include-package-data = true
 
 [tool.uv.sources]
-python-apt = { git = "https://salsa.debian.org/apt-team/python-apt.git", rev = "3.0.0ubuntu1" }
+python-apt = { git = "https://salsa.debian.org/apt-team/python-apt.git", rev = "main" }
 
 [tool.ruff]
 extend-exclude = [

@@ -166,7 +166,7 @@ def setup():
             "nova-manage", ["cell_v2", "create_cell", "--name=cell1"], user="nova"
         )
     core_utils.sudo("nova-manage", ["db", "sync"], user="nova")
-    core_utils.restart_service("nova-api")
+#   core_utils.restart_service("nova-api")
     core_utils.restart_service("nova-scheduler")
     core_utils.restart_service("nova-conductor")
     core_utils.restart_service("nova-compute")

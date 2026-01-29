@@ -39,7 +39,7 @@ def determine_packages() -> list[str]:
         core_apt.PkgVersionCompare("python3-neutron", candidate=True)
         >= NEUTRON_FLAMINGO_VERSION
     ):
-        packages += ["neutron-rpc-server", "neutron-api", "neutron-periodic-workers"]
+        packages += ["neutron-rpc-server", "neutron-periodic-workers"]
     else:
         packages += ["neutron-server"]
 
@@ -142,7 +142,6 @@ def setup():
     if core_apt.PkgVersionCompare("python3-neutron") >= NEUTRON_FLAMINGO_VERSION:
         neutron_daemons = [
             "neutron-rpc-server",
-            "neutron-api",
             "neutron-periodic-workers",
         ]
     else:
